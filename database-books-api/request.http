@@ -1,7 +1,7 @@
 ## deno run --config tsconfig.json --allow-net --allow-read --allow-env entry-point.ts
 
 # POST /api/add-book HTTP/1.1
-# Host: localhost:8083
+# Host: 127.0.0.1:8083
 # Content-Type: application/json
 
 # {
@@ -18,14 +18,26 @@
 #     "author": "Yuval Noah Harari"
 # }
 
-# GET /api/get-book/1 HTTP/1.1
-# Host: localhost:8083
+# POST /api/add-book HTTP/1.1
+# Host: 127.0.0.1:8083
+# Content-Type: application/json
+
+# {
+#     "name": "A terra dos quer o univéso",
+#     "author": "Elson Júnior Nunes de Araújo"
+# }
+
+# GET /api/get-book/4 HTTP/1.1
+# Host: 127.0.0.1:8083
 
 # GET /api/Yuval Noah Harari/books HTTP/1.1
-# Host: localhost:8083
+# Host: 127.0.0.1:8083
 
 # GET /api/search?id=1&name=The Diary Of a Young Girl HTTP/1.1
-# Host: localhost:8083
+# Host: 127.0.0.1:8083
 
 # GET /api/all-books HTTP/1.1
-# Host: localhost:8083
+# Host: 127.0.0.1:8083
+
+DELETE /api/delete-book?id=6 HTTP/1.1
+Host: 127.0.0.1:8083
